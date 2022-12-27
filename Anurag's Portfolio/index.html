@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5360721a90.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!----------------------------------- Home Section ------------------------------->
+    <div id="header">
+        <div class="container">
+            <!-- the anurag khandare pink logo -->
+
+            <!-- navbar -->
+            <nav><img src="Product (1).png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">My Services</a></li>
+                    <li><a href="#">My Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <!-- <p>---------------------------- WELCOME --------------------------------------</p> -->
+                <marquee direction="right" behavior="alternate">
+                    Hey Programmer, WELCOME!
+                </marquee>
+                <h1>My Name is <span id="name">Anurag Khandare</span> </h1>
+                <h4>I am a <span>W</span>eb <span>D</span>eveloper, <span>M</span>achine <span>L</span>earning
+                    <span>P</span>rogrammer and <span>C</span>ompetitive <span>P</span>rogrammer.
+                </h4>
+                <div class="btn">
+                    <button>Contact Me</button>
+                    <button>Download Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------- About section ------------------------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="bat.jpg" alt="" height="100" width="100">
+                </div>
+                <div class="about-col2">
+                    <h1 id="subtitle">About Me</h1>
+                    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quidem, quod ratione
+                        facilis eos harum nulla nemo tempora esse! Iusto consectetur, vero maiores quod aspernatur fugit
+                        unde veritatis cumque nesciunt, laborum magnam natus repellat.</p>
+
+                    <div class="tabtitles">
+                        <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                        <p class="tablinks" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tabcontains active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span> <br> Designing Websites</li>
+                            <li><span>Web Development</span> <br> Designing Web/App Interfaces</li>
+                            <li><span>Machine Learning</span> <br> Training models for Prediction</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontains" id="experience">
+                        <ul>
+                            <li><span>Web Developer</span> <br> EDC VIT, PUNE</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontains" id="education">
+                        <ul>
+                            <li><span>B TECH Computer Engineering</span><br> Vishwakarma Institute of Technology, Pune
+                                <br>
+                            </li>
+                            <li><span>High School (HSC)</span><br> B N Bandodkar College of Science, Thane(Mumbai) <br>
+                            </li>
+                            <li><span>School (SSC)</span><br> Saraswati Vidyalaya, Airoli(Navi Mumbai) <br> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcontains = document.getElementsByClassName("tabcontains");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("activelink")
+            }
+            for (tabcontent of tabcontains) {
+                tabcontain.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("activelink")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+
+    <!-- --------------------My services and projects----------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 id="subtitle">My Services</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developer</h2>
+                    <p>I am a decent knowledge of Website building and I like to create projects that are challenging
+                        and at the same time, useful for people. The Technology I use are HTML, CSS, JavaScript,
+                        Bootstrap, SQL, and NodeJs</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-computer"></i>
+                    <h2>Machine Learning </h2>
+                    <p>This is the first technology that I explored and I have created models that are used in research
+                        and published in the conference journal. I have used programming languages like Python and R for
+                        developing ML models and training them with maximum prediction/classification accuracy.</p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-marker"></i>
+                    <h2>Content Writer</h2>
+                    <p>Ever since I was introduced to essay writing, my passion for writing has only increased. I can
+                        create content on topics like self-help, tech, report, philosophy, speech writing, and many more
+                    </p>
+                    <!-- <a href="#">Learn more</a> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------- Portfolio ------------------------------- -->
+
+    <div class="main-contact">
+
+        <div class="portfolio">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="card1">
+                    <img src="mars.jpg" alt="" height="400" width="400">
+                    <div class="container" style="margin-top: 10px;">
+                        <h4><b>Mars Weather App</b></h4> 
+                        <p>Fetches weather condition on mars</p> 
+                      </div>
+                </div>
+                <div class="card2">
+                    <img src="stock.jpg" alt="" height="400" width="400">
+                    <div class="container" style="margin-top: 10px;">
+                        <h4><b>Mars Weather App</b></h4> 
+                        <p>Fetches weather condition on mars</p> 
+                      </div>
+                </div>
+                <div class="card1">
+                    <img src="weather.jpg" alt="" height="400" width="400">
+                    <div class="container" style="margin-top: 10px;">
+                        <h4><b>Weather and News display, analysis and prediction</b></h4> 
+                        <p>Displays weather condition all around the world, news and <br> predicts if climate is favouralve to play or not.</p> 
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------contact us ----------------------------------- -->
+    <h2 class="Contact-title">Contact Me</h2>
+    <div class="contactMe">
+
+        <div class="mycontact">
+            <div class="email">
+                <div class="icon"><a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=anuragkhandare2001@gmail.com&su=SUBJECT&body=BODY&bcc=anuragkhandareln.com"
+                        class="fa-solid fa-envelope" style="font-size: 50px;      padding-left: 81px;
+                    padding-bottom:10px;"></a></div>
+                <div class="text">
+                    <p>anuragkhandare2001@gmail.com</p>
+                </div>
+            </div>
+            <div class="phone">
+                <div class="icon"></div>
+                <div class="text">
+                    <span><a href="https://wa.me/7900161686" class="fa-sharp fa-solid fa-phone" style="font-size: 50px; padding-top: 20px;
+                            padding-bottom: 20px;
+                            padding-left: 7px;
+                        "></a></span>
+                    <p>7900161686</p>
+                </div>
+            </div>
+            <div class="linkedIn">
+
+                <div class="text">
+                    <span><a href="https://www.linkedin.com/in/anuragkhandare/" class="fa-brands fa-linkedin" style="font-size: 50px; padding-top: 20px;
+                            padding-bottom: 20px;
+                            padding-left: 0px;
+                        "></a></span>
+                    <p>LinkedIn</p>
+                </div>
+            </div>
+            <div class="github">
+
+                <div class="text">
+                    <span><a href="https://github.com/Vengeance2001" class="fa-brands fa-github" style="font-size: 50px; padding-top: 20px;
+                            padding-bottom: 20px;
+                            padding-left: 13px;
+                        "></a></span>
+                    <p>Github Profile</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="containers">
+            <form action="action_page.php">
+
+                <label for="fname" style="color: chartreuse;">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname" style="color: chartreuse;">Email</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your Email..">
+
+
+                <label for="subject" style="color: chartreuse;">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write your message here.."
+                    style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ------------------------------------ Thanking -------------------------------------------- -->
+    <marquee class="hello" direction="right" height="50px" scrollamount="10" style="margin-right:10% ;font-size: 26px;">
+        ⭐😊Thank You for visiting my Website⭐😊
+        </marquee>
+    <marquee class="hello" direction="left" height="50px" scrollamount="10" style="margin-right:10% ;font-size: 26px; color: crimson;">
+        Have a nice day☀️
+        </marquee>
+
+</div>
+
+</html>

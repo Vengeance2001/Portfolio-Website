@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #080808;
+    color: #fff;
+}
+
+.container{
+    /* padding: 10px 6%; */
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url(back1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+    width: 300px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+nav ul li{
+    display:  inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    font-weight: bolder;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font: 18px;
+    position: relative;
+
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position:absolute;
+    left: 0;
+    bottom: -6px;
+    transition:0.3s;
+}
+
+/* used to spread the bottom line after the hover comes */
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* Makes the whole name pink */
+li a:hover{color: #ff004f;
+}
+
+marquee{
+    margin-right: 35%;
+    margin-left: 5%;
+    color: #bace07;
+}
+.header-text{
+    margin-left: 20%;
+    margin-right: 5%;
+    margin-top: 10%;
+    font-size: 40px;
+    
+}
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* color: #2cbe16; */
+}
+#name {
+    color: #ff004f;
+}
+.header-text span{
+    color: #2cbe16;
+}
+
+.btn{
+    margin-left: 26%;
+    padding: 20px;
+}
+
+.btn button{
+    padding: 10px;
+    cursor: pointer;
+    color:#fff;
+    background-color: #ff004f;
+    font-weight: bold;
+
+}
+
+/* ======= About section ===================== */
+
+#about{
+    padding: 80px ;
+    color: #ababab;
+}
+
+.about-col2 p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* col here make contain side by side */
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col2{
+    flex-basis: 60%;
+}
+.about-col1 img{
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+}
+
+#subtitle{
+    font-size:  60px; ;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tabtitles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tablinks{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tablinks ::after{
+    content: '';
+    width:50% ;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom:8px;
+    transition: 0.5s;
+
+}
+
+
+
+.tabcontains ul li {
+    list-style: none;
+    margin: 15px 0;
+}
+.tabcontains ul li span{
+    color: #ff004f;
+    font-size: 18px;
+}
+.tabcontains{
+    display: none;
+}
+.tabcontains.active-tab{
+    display: block;
+}
+
+/* ----------------- services and portfolio ==================== */
+#services{
+    padding: 30px;
+   
+}
+#subtitle{
+    padding-left: 35%;
+}
+
+.service-list{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+grid-gap: 40px;
+margin-top: 50px;
+}
+
+.service-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight:300 ;
+    border-radius: 10px;
+    /* this is making all the movement in the cards */
+    transition: background 0.5s, transform 0.5s;
+    border: 6px solid blue;
+}
+
+.service-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.service-list div h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.service-list div a{
+    text-decoration: none;
+    color: #ff004f;
+    margin-top: 20px;
+    display: inline-block;
+}
+.service-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* ------------------- portfolio ----------------------------- */
+
+.portfolio h2{
+    margin-top: 10vh;
+    margin-bottom: 13vh;
+    font-size: 50px;
+    padding-left: 35%;
+}
+
+.projects{
+    margin-bottom: 20vh;
+    display: grid;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.projects img{
+    border: 7px solid blue;
+    border-radius: 10%;
+}
+
+/* -------------- contact me --------------------------------- */
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .containers{
+    border-radius: 5px;
+    /* background-color: #9e4040; */
+    padding: 20px;
+  }
+
+ .Contact-title{
+    margin-bottom: 5%;
+    font-size: 45px;
+    margin-left: 35%;
+  }
+
+  .contactMe{
+    display: flex;
+    /* background-color: #2cbe16; */
+    justify-content: space-around;
+    /* padding: 10px; */
+  }
+
+  .mycontact{
+    width: 30%;
+    display: inline-flex;
+    /* background-color: #3f7e65; */
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 20px;
+  }
+
+
+
+
+
+  
+
+
+
+
+
